@@ -66,6 +66,29 @@ export default function Enacted() {
         </p>
       </PageHead>
 
+<div className="dulag-budget-notice" role="note">
+  <div className="dulag-budget-notice-heading">
+    <span aria-hidden="true">ⓘ </span>
+    <strong>Important Notice on Historical Budget Records</strong>
+  </div>
+
+  <p> <i>
+    The records displayed below are identified through keyword
+    matching for "Dulag" in the General Appropriations Acts
+    (2020–2026). Some records may refer to locations outside
+    Dulag, Leyte.
+    </i>
+  </p>
+
+  <p>
+    These results are for reference and verification purposes only.
+    Inclusion does not confirm that a project is located in Dulag,
+    that funding was released, or that any amount was actually spent.
+    Displayed totals may include unrelated records.
+  </p>
+</div>
+
+
       <OfficeHistories />
 
       {places.length === 0 ? (

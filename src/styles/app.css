@@ -561,3 +561,266 @@ button:focus-visible {
     font-size: 26px;
   }
 }
+
+/* DULAG OPEN | Homepage dashboard enhancements
+   Add at the very bottom of src/styles/app.css.
+   Scoped to the new homepage classes to avoid changing other pages. */
+
+.dulag-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(220px, 0.7fr);
+  align-items: end;
+  gap: 28px;
+  margin: 26px 0 22px;
+  padding: clamp(24px, 4vw, 48px);
+  border-radius: 18px;
+  background: linear-gradient(125deg, #064e3b, #047857);
+  color: #fff;
+}
+.dulag-hero-eyebrow {
+  margin: 0 0 14px;
+  color: #fde68a;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.10em;
+}
+.dulag-hero h1 {
+  max-width: 680px;
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  line-height: 1.13;
+  letter-spacing: -0.035em;
+}
+.dulag-hero-lede p {
+  max-width: 650px;
+  margin: 0;
+  color: #ecfdf5;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.dulag-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+.dulag-hero-button {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 11px 17px;
+  border-radius: 9px;
+  background: #facc15;
+  color: #153b2e;
+  font-weight: 800;
+  text-decoration: none;
+}
+.dulag-hero-button:hover { background: #fde047; color: #153b2e; }
+.dulag-hero-link { color: #fff; font-weight: 650; text-decoration: underline; text-underline-offset: 5px; }
+.dulag-hero-link:hover { color: #fef08a; }
+.dulag-hero-note {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,.30);
+  border-radius: 12px;
+  background: rgba(255,255,255,.10);
+  color: #f0fdf4;
+  font-size: .87rem;
+  line-height: 1.55;
+}
+.dulag-hero-note strong { color: #fde68a; }
+
+.dulag-dashboard-stats .stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  margin: 0 0 40px;
+}
+.dulag-dashboard-stats .stats > div {
+  min-width: 0;
+  padding: 20px;
+  background: #f8faf7;
+  border: 1px solid #d6e5dc;
+  border-radius: 12px;
+}
+.dulag-dashboard-stats .stats > div:nth-child(3) {
+  background: #fef3c7;
+  border-color: #f4d66c;
+}
+.dulag-dashboard-stats .stat { color: #064e3b; overflow-wrap: anywhere; }
+.dulag-dashboard-stats .stat-accent { color: #854d0e; }
+.dulag-dashboard-stats .stat-sub { line-height: 1.5; }
+
+@media (max-width: 850px) {
+  .dulag-hero { grid-template-columns: 1fr; }
+  .dulag-dashboard-stats .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .dulag-hero { padding: 24px 18px; margin-top: 16px; }
+  .dulag-dashboard-stats .stats { grid-template-columns: 1fr; }
+}
+
+
+/* DULAG OPEN - Homepage Dashboard */
+
+.dulag-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(220px, 0.7fr);
+  align-items: end;
+  gap: 28px;
+  margin: 26px 0 24px;
+  padding: clamp(24px, 4vw, 48px);
+  background: linear-gradient(125deg, #064E3B, #047857);
+  color: white;
+  border-radius: 18px;
+}
+
+.dulag-hero-eyebrow {
+  color: #FDE68A;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.dulag-hero h1 {
+  color: white;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin: 15px 0;
+}
+
+.dulag-hero-lede p {
+  color: #D1FAE5;
+  line-height: 1.7;
+}
+
+.dulag-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.dulag-hero-button {
+  display: inline-block;
+  padding: 13px 22px;
+  background: #FACC15;
+  color: #064E3B;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 9px;
+}
+
+.dulag-hero-button:hover {
+  background: #FDE047;
+  color: #064E3B;
+}
+
+.dulag-hero-link {
+  color: white;
+  font-weight: 600;
+}
+
+.dulag-hero-note {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px;
+  border: 1px solid #6EE7B7;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ECFDF5;
+  line-height: 1.6;
+}
+
+.dulag-dashboard-stats .stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+  border: 0;
+}
+
+.dulag-dashboard-stats .stats > div {
+  min-width: 0;
+  background: #F8FAF7;
+  border: 1px solid #D6E5DC;
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.dulag-dashboard-stats .stats > div:nth-child(3) {
+  background: #FEF3C7;
+  border-color: #FDE68A;
+}
+
+.dulag-dashboard-stats .stat {
+  color: #064E3B;
+}
+
+@media (max-width: 850px) {
+  .dulag-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .dulag-dashboard-stats .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .dulag-dashboard-stats .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .dulag-hero {
+    padding: 24px;
+  }
+}
+
+/* DULAG OPEN — Historical Budget Notice */
+
+.dulag-budget-notice {
+  margin: 24px 0 32px;
+  padding: 20px 24px;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-left: 4px solid #D97706;
+  border-radius: 10px;
+  color: #78350F;
+}
+
+.dulag-budget-notice-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #78350F;
+}
+
+.dulag-budget-notice-heading span {
+  font-size: 20px;
+  color: #92400E;
+}
+
+.dulag-budget-notice p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .dulag-budget-notice {
+    padding: 16px;
+  }
+}
+
