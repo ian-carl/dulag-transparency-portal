@@ -8,10 +8,10 @@ import { NATIONAL_URL, SOURCE_CODE_URL } from '../lib/links';
 const BETTERGOV_LOGO = '/brand/bettergov-horizontal-primary.png';
 
 const NAV = [
-  { to: '/', hash: '', label: '2027 projects' },
-  { to: '/', hash: '#offices', label: 'Offices and districts' },
-  { to: '/gaa', hash: '', label: 'Budgets 2020–2026' },
-  { to: '/about', hash: '', label: 'About the data' },
+  { to: '/', hash: '', label: '2027 Projects' },
+  { to: '/', hash: '#offices', label: 'Offices & Districts' },
+  { to: '/gaa', hash: '', label: 'Historical Budgets' },
+  { to: '/about', hash: '', label: 'About & Sources' },
 ];
 
 export function Masthead() {
