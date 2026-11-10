@@ -668,6 +668,7 @@ button:focus-visible {
 }
 
 
+
 /* DULAG OPEN - Homepage Dashboard */
 
 .dulag-hero {
@@ -755,6 +756,12 @@ button:focus-visible {
   border: 1px solid #D6E5DC;
   border-radius: 12px;
   padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 170px;
 }
 
 .dulag-dashboard-stats .stats > div:nth-child(3) {
@@ -783,6 +790,71 @@ button:focus-visible {
 
   .dulag-hero {
     padding: 24px;
+  }
+}
+
+/* Fix stat card text alignment */
+.dulag-dashboard-stats .stats > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+  min-height: 170px;
+  padding: 22px;
+}
+
+/* Reset default browser spacing of dt/dd */
+.dulag-dashboard-stats .stats dt,
+.dulag-dashboard-stats .stats dd {
+  margin: 0;
+}
+
+/* Label */
+.dulag-dashboard-stats .label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #6B7D73;
+}
+
+/* Main amount/number */
+.dulag-dashboard-stats .stat {
+  font-size: clamp(26px, 3vw, 46px);
+  line-height: 1.05;
+  font-weight: 800;
+  color: #064E3B;
+  letter-spacing: -0.03em;
+}
+
+/* Subtext */
+.dulag-dashboard-stats .stat-sub {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #5F6F66;
+  max-width: 24ch;
+}
+
+/* Highlighted house bill card */
+.dulag-dashboard-stats .stats > div:nth-child(3) .stat {
+  color: #065F46;
+}
+
+/* Mobile refinement */
+@media (max-width: 850px) {
+  .dulag-dashboard-stats .stats > div {
+    min-height: auto;
+    padding: 18px;
+  }
+
+  .dulag-dashboard-stats .stat {
+    font-size: 22px;
+  }
+
+  .dulag-dashboard-stats .stat-sub {
+    font-size: 12px;
+    max-width: none;
   }
 }
 
@@ -824,3 +896,505 @@ button:focus-visible {
   }
 }
 
+/* =========================================
+   DULAG OPEN - 2027 PROJECT EXPLORER
+   ========================================= */
+
+/* Section title */
+.main #projects {
+  margin-top: 48px;
+}
+
+.main #projects .section-h {
+  color: #064E3B;
+  font-size: clamp(21px, 2.5vw, 28px);
+  letter-spacing: -0.025em;
+}
+
+/* Download button */
+.main #projects .button-quiet {
+  border: 1px solid #047857;
+  border-radius: 8px;
+  color: #065F46;
+  background: #ECFDF5;
+}
+
+.main #projects .button-quiet:hover {
+  background: #D1FAE5;
+}
+
+/* Search and filter controls */
+.main #projects .toolbar {
+  background: #F8FAF7;
+  border: 1px solid #D6E5DC;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 16px 0 24px;
+  gap: 14px;
+}
+
+.main #projects .field input,
+.main #projects .field select {
+  background: #FFFFFF;
+  border: 1px solid #CBDDD2;
+  border-radius: 8px;
+  min-height: 44px;
+  max-width: 100%;
+}
+
+.main #projects .field input:focus,
+.main #projects .field select:focus {
+  border-color: #047857;
+  box-shadow: 0 0 0 3px #D1FAE5;
+}
+
+/* Project table */
+.main #projects .table {
+  border-top: none;
+}
+
+.main #projects .tr.th {
+  background: #ECFDF5;
+  border-radius: 8px 8px 0 0;
+  border-bottom: 2px solid #047857;
+  padding: 14px 12px;
+  color: #065F46;
+}
+
+.main #projects .tr:not(.th) {
+  padding: 20px 12px;
+  border-bottom: 1px solid #E2ECE5;
+  transition: background 0.2s ease;
+}
+
+.main #projects .tr:not(.th):hover {
+  background: #F0FDF4;
+}
+
+.main #projects .project-title {
+  font-weight: 650;
+  color: #064E3B;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.main #projects .project-title:hover {
+  color: #047857;
+  text-decoration: underline;
+}
+
+.main #projects .project-meta {
+  margin-top: 5px;
+  color: #64766C;
+}
+
+/* Status and amounts */
+.main #projects .td-status {
+  font-size: 13px;
+}
+
+.main #projects .tr > .num {
+  font-weight: 600;
+}
+
+/* Mobile project cards */
+@media (max-width: 860px) {
+  .main #projects .tr:not(.th) {
+    background: #FFFFFF;
+    border: 1px solid #D6E5DC;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    padding: 18px;
+    gap: 12px;
+    box-shadow: 0 2px 8px rgba(6, 78, 59, 0.04);
+  }
+
+  .main #projects .tr:not(.th):hover {
+    background: #F8FAF7;
+  }
+
+  .main #projects .project-title {
+    font-size: 16px;
+  }
+
+  .main #projects .toolbar {
+    padding: 14px;
+  }
+
+  .main #projects .tr > .r[data-label] {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 560px) {
+  .main #projects .tr:not(.th) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main #projects .tr > .r[data-label]:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .main #projects .field {
+    width: 100%;
+  }
+
+  .main #projects .list-head {
+    gap: 12px;
+  }
+}
+
+
+/* ======================================
+   DULAG OPEN — Refined Budget Stat Cards
+   ====================================== */
+
+.dulag-dashboard-stats {
+  margin: 24px 0 36px;
+}
+
+.dulag-dashboard-stats .stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.dulag-dashboard-stats .stats > div {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 9px;
+  min-width: 0;
+  min-height: 150px;
+  margin: 0;
+  padding: 22px;
+  background: #F8FAF7;
+  border: 1px solid #D6E5DC;
+  border-radius: 14px;
+}
+
+.dulag-dashboard-stats .stats > div:nth-child(3) {
+  background: #FEF3C7;
+  border-color: #FDE68A;
+}
+
+.dulag-dashboard-stats .stats dt,
+.dulag-dashboard-stats .stats dd {
+  margin: 0;
+  padding: 0;
+}
+
+.dulag-dashboard-stats .stats dt {
+  color: #52695F;
+  font-size: 11px;
+  line-height: 1.4;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.dulag-dashboard-stats .stats .stat {
+  color: #064E3B;
+  font-size: clamp(24px, 2.4vw, 35px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+
+.dulag-dashboard-stats .stats .stat-sub {
+  color: #52695F;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .dulag-dashboard-stats .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .dulag-dashboard-stats .stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .dulag-dashboard-stats .stats > div {
+    min-height: 125px;
+    padding: 20px;
+  }
+
+  .dulag-dashboard-stats .stats .stat {
+    font-size: 30px;
+  }
+}
+
+
+/* ==========================================
+   DULAG OPEN — Mobile Card Overflow Fix
+   ========================================== */
+
+/* Allow card contents to shrink and wrap */
+.dulag-dashboard-stats,
+.dulag-dashboard-stats .stats,
+.dulag-dashboard-stats .stats > div {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.dulag-dashboard-stats .stats > div {
+  overflow: visible;
+}
+
+/* Prevent inherited widths and alignment issues */
+.dulag-dashboard-stats .stats dt,
+.dulag-dashboard-stats .stats dd {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Mobile-friendly text sizes */
+@media (max-width: 560px) {
+  .dulag-dashboard-stats .stats {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    width: 100%;
+  }
+
+  .dulag-dashboard-stats .stats > div {
+    width: 100%;
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .dulag-dashboard-stats .stats .stat {
+    font-size: clamp(26px, 8vw, 34px);
+    line-height: 1.15;
+  }
+
+  .dulag-dashboard-stats .stats .stat-sub {
+    font-size: 12px;
+    line-height: 1.6;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ==========================================
+   DULAG OPEN — MOBILE RESPONSIVE REPAIR
+   ========================================== */
+
+/* Prevent the main page from exceeding viewport */
+.page,
+.main,
+.main > *,
+.dulag-dashboard-stats {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Header improvements */
+@media (max-width: 600px) {
+  .masthead-top-inner {
+    min-width: 0;
+  }
+
+  .masthead-links {
+    gap: 10px 16px;
+    justify-content: flex-start;
+  }
+
+  .masthead-main {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .masthead-title {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .masthead-name {
+    font-size: 24px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .masthead-kicker {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    overflow-wrap: anywhere;
+  }
+
+  .masthead-with {
+    margin-left: 0;
+    align-items: flex-start;
+  }
+
+  .masthead-with img {
+    max-width: 128px;
+    height: auto;
+  }
+
+  /* Allow horizontal navigation scrolling */
+  .subnav-inner {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .subnav a {
+    flex: 0 0 auto;
+    font-size: 13px;
+  }
+}
+
+/* Hero section */
+.dulag-hero,
+.dulag-hero-content,
+.dulag-hero-lede,
+.dulag-hero-note {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .dulag-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+    padding: 24px 20px;
+    margin: 20px 0;
+    border-radius: 16px;
+  }
+
+  .dulag-hero h1 {
+    font-size: clamp(27px, 8vw, 36px);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+  }
+
+  .dulag-hero-lede,
+  .dulag-hero-lede p,
+  .dulag-hero-note,
+  .dulag-hero-note span {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .dulag-hero-lede p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .dulag-hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dulag-hero-button {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .dulag-hero-note {
+    padding: 18px;
+    font-size: 13px;
+  }
+}
+
+/* Budget cards: override inherited table-style rules */
+.dulag-dashboard-stats .stats {
+  min-width: 0;
+  width: 100%;
+}
+
+.dulag-dashboard-stats .stats > div {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.dulag-dashboard-stats .stats dt,
+.dulag-dashboard-stats .stats dd,
+.dulag-dashboard-stats .stats .num {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (max-width: 600px) {
+  .dulag-dashboard-stats .stats {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .dulag-dashboard-stats .stats > div {
+    width: 100%;
+    padding: 18px 20px !important;
+    min-height: 0;
+    border: 1px solid #D6E5DC;
+  }
+
+  .dulag-dashboard-stats .stats .stat {
+    font-size: clamp(26px, 8vw, 34px);
+    line-height: 1.15;
+    margin-top: 0 !important;
+  }
+
+  .dulag-dashboard-stats .stats .stat-sub {
+    font-size: 12px;
+    line-height: 1.55;
+    margin-top: 0 !important;
+  }
+}
+
+/* Offices and other content */
+@media (max-width: 600px) {
+  .ogrid,
+  .ocard,
+  .ocard-head {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .ocard {
+    overflow-wrap: anywhere;
+  }
+
+  .section-h,
+  .section-lede {
+    overflow-wrap: anywhere;
+  }
+}
