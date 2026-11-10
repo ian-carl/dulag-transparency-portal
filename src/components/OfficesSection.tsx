@@ -105,6 +105,26 @@ function Offices({ list, queries, projects }: { list: Envelope<DistrictCard>[]; 
         Congress.{note && <> {note}</>}
       </p>
 
+<div className="dulag-office-notice" role="note">
+  <div className="dulag-office-notice-heading">
+    <span aria-hidden="true">ⓘ</span>
+    <strong>Understanding DPWH Office Allocations</strong>
+  </div>
+
+  <p>
+    The figures shown for a DPWH District Engineering Office
+    represent its wider office-level proposed allocations,
+    which may cover multiple municipalities.
+  </p>
+
+  <p>
+    These amounts should not be interpreted as funding
+    exclusively allocated to Dulag, Leyte. Projects listed
+    in this portal are separately identified through
+    available budget records and may require verification.
+  </p>
+</div>
+
       <div className={`ogrid${offices.length === 1 ? ' one' : ''}`}>
         {offices.map((o) => <Office key={o.office.id} view={o} />)}
       </div>
