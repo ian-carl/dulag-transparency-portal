@@ -95,3 +95,40 @@ h1, h2, h3 {
 }
 .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
 .muted { color: var(--ink-3); }
+
+
+/* ==========================================
+   DULAG OPEN — Emerald & Gold Theme
+   ========================================== */
+
+:root {
+  /* Backgrounds */
+  --paper: #FFFFFF;
+  --paper-2: #F8FAF7;
+  --paper-3: #ECFDF5;
+
+  /* Borders */
+  --rule: #D6E5DC;
+  --rule-soft: #E7F0E9;
+
+  /* Text */
+  --ink: #102A22;
+  --ink-2: #334C42;
+  --ink-3: #52695F;
+  --ink-mute: #708378;
+
+  /* Main branding */
+  --accent: #047857;
+  --accent-deep: #064E3B;
+  --accent-soft: #D1FAE5;
+
+  /* Additional Dulag colors */
+  --dulag-yellow: #FACC15;
+  --dulag-gold: #EAB308;
+  --dulag-yellow-soft: #FEF3C7;
+
+  /* Financial status colors */
+  --positive: #247548;
+  --negative: #B42318;
+  --neutral: #8A691A;
+}

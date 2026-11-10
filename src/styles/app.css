@@ -462,3 +462,102 @@ code { font-family: var(--font-mono); font-size: 0.9em; background: var(--paper-
   .list-head { flex-direction: column; align-items: flex-start; gap: 4px; }
   .field { flex: 1 1 100%; }
 }
+
+
+/* ==========================================
+   DULAG OPEN — Visual Enhancements
+   ========================================== */
+
+/* Header */
+.masthead {
+  background: #FFFFFF;
+  border-bottom: 1px solid #D6E5DC;
+}
+
+.masthead-main {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.masthead-kicker {
+  color: #047857;
+  font-weight: 700;
+}
+
+.masthead-name {
+  color: #064E3B;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-size: clamp(26px, 3vw, 36px);
+}
+
+/* Navigation */
+.subnav {
+  background: #064E3B;
+}
+
+.subnav a {
+  color: #E2F4EA;
+  transition: color 0.2s ease;
+}
+
+.subnav a:hover,
+.subnav a.active {
+  color: #FFFFFF;
+}
+
+.subnav a.active {
+  border-bottom-color: #FACC15;
+}
+
+/* Main content */
+.main {
+  background: #FFFFFF;
+}
+
+.page-head h1 {
+  color: #064E3B;
+}
+
+.eyebrow {
+  color: #047857;
+}
+
+/* Budget summary statistics */
+.stats {
+  border-top: 3px solid #047857;
+  border-bottom-color: #D6E5DC;
+}
+
+.stat-accent {
+  color: #047857;
+}
+
+/* Text links */
+a {
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-color: #EAB308;
+}
+
+/* Input focus */
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 2px solid #047857;
+  outline-offset: 2px;
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 640px) {
+  .masthead-main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .masthead-name {
+    font-size: 26px;
+  }
+}
