@@ -16,8 +16,8 @@ export default defineConfig({
     offices: [],
     places: [
       {
-        label: "Dulag",
-        q: "Dulag Leyte",
+        label: "'Dulag'",
+        q: "Dulag",
         region: "VIII"
       }
     ],
@@ -28,5 +28,6 @@ export default defineConfig({
   },
   reporting: {
     enabled: false
-  }
+  },
+  buildYourOwnStrip: false,
 });

@@ -4,7 +4,7 @@ import type { BridgeGroup, DatasetInfo, Disclaimer, GroupInfo } from '../api/typ
 import { BRIDGE_GROUPS } from '../api/types';
 import { shortNameOf, type DatasetKey } from '../config';
 import { Await, Disclaimers, ReasonTags, StatusChip } from '../components/Bits';
-import { PageHead } from '../components/Chrome';
+
 import OfficesSection from '../components/OfficesSection';
 import { projectsCsv, downloadText } from '../lib/csv';
 import { count, php, phpDelta, plural } from '../lib/format';
@@ -119,14 +119,45 @@ function Projects({ scope, datasets }: { scope: ScopeResult; datasets: DatasetIn
 
   return (
     <>
-      <PageHead
-        eyebrow={<>FY 2027<span className="sep">·</span>NEP and House Bill 10858<span className="sep">·</span>{name}</>}
-        title={`${plural(summary.rows, 'project')} for ${name} in the 2027 budget`}
-      >
-        <Lede summary={summary} />
-      </PageHead>
+      
+<section className="dulag-hero" aria-labelledby="dulag-hero-title">
+  <div className="dulag-hero-content">
+    <p className="dulag-hero-eyebrow">
+      FY 2027 NATIONAL BUDGET · DULAG, LEYTE
+    </p>
 
-      <Stats summary={summary} programName={programName} />
+    <h1 id="dulag-hero-title">
+      Understand the budget projects listed for {name}.
+    </h1>
+
+    <div className="dulag-hero-lede">
+      <Lede summary={summary} />
+    </div>
+
+    <div className="dulag-hero-actions">
+      <a className="dulag-hero-button" href="#projects">
+        Explore Projects <span aria-hidden="true">→</span>
+      </a>
+
+      <a className="dulag-hero-link" href="#offices">
+        View Offices & Districts
+      </a>
+    </div>
+  </div>
+
+  <div className="dulag-hero-note">
+    <strong>Know the difference.</strong>
+    <span>
+      These figures describe FY2027 budget proposals,
+      not approved municipal funds or actual spending.
+    </span>
+  </div>
+</section>
+
+<div className="dulag-dashboard-stats">
+  <Stats summary={summary} programName={programName} />
+</div>
+
 
       <OfficesSection />
 

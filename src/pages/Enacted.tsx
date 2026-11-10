@@ -53,7 +53,7 @@ export default function Enacted() {
   return (
     <main className="page main">
       <PageHead
-        eyebrow={<>GAA<span className="sep">·</span>FY {FIRST}–{LAST}<span className="sep">·</span>{name}</>}
+        eyebrow={<>GAA<span className="sep">·</span>FY {FIRST}–{LAST}</>}
         title={
           state.status === 'ready'
             ? `${plural(state.value.rows.length, 'program and project', 'programs and projects')} in the ${FIRST}–${LAST} budgets name ${placeList}`
