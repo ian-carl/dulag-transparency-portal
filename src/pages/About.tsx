@@ -58,6 +58,81 @@ function AboutView({ scope, overview }: { scope: ScopeResult; overview: Overview
         </p>
       </PageHead>
 
+{/* DULAG OPEN — About the Portal */}
+<section className="dulag-about" aria-labelledby="dulag-about-title">
+
+  <div className="dulag-about-intro">
+    <p className="dulag-about-eyebrow">
+      TRANSPARENCY & PUBLIC INFORMATION
+    </p>
+
+    <h2 id="dulag-about-title">
+      Understanding Public Budget Data
+    </h2>
+
+    <p>
+      This portal makes selected national budget information
+      easier to explore for residents and stakeholders
+      interested in Dulag, Leyte.
+    </p>
+  </div>
+
+  <div className="dulag-about-grid">
+
+    <article className="dulag-about-card">
+      <span className="dulag-about-icon" aria-hidden="true">
+        01
+      </span>
+      <h3>Where the Data Comes From</h3>
+      <p>
+        Budget information is retrieved through the
+        BetterGov.ph Budget API, using published national
+        budget documents and available project records.
+      </p>
+    </article>
+
+    <article className="dulag-about-card">
+      <span className="dulag-about-icon" aria-hidden="true">
+        02
+      </span>
+      <h3>How Projects Are Identified</h3>
+      <p>
+        The portal identifies records through project-title
+        searches and supported office or geographic
+        associations. Historical results matching "Dulag"
+        may include locations outside Dulag, Leyte.
+        Project locations require independent verification.
+      </p>
+    </article>
+
+    <article className="dulag-about-card">
+      <span className="dulag-about-icon" aria-hidden="true">
+        03
+      </span>
+      <h3>Independent Civic Initiative</h3>
+      <p>
+        This is an independently operated public information
+        project. It is not an official website or financial
+        reporting system of the Municipal Government of Dulag.
+        The information should be verified against official
+        source documents.
+      </p>
+    </article>
+
+  </div>
+
+  <div className="dulag-about-disclaimer" role="note">
+    <strong>Important distinction:</strong>
+    <p>
+      Budget appropriations and proposals are not equivalent
+      to funds released or amounts actually spent. Project
+      inclusion does not establish implementation, completion,
+      or municipal ownership of the allocation.
+    </p>
+  </div>
+
+</section>
+
       <section className="section" aria-labelledby="q-h">
         <h2 id="q-h" className="section-h">The questions this portal asks</h2>
         <div className="table queries" role="table" aria-label="Queries">
